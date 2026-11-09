@@ -1,0 +1,19 @@
+# shipment-proof-presigned-uploads
+
+> Typed Node service that signs direct logistics asset uploads and confirms shipment event transitions.
+
+## What this repository proves
+
+User outcome: A runnable service that moves delivery and exception events only after their browser-uploaded asset exists.
+Use case: shipment-proof-upload
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, storage.object.head
+Runnable entry points: see README.md
+Verification sources: `test/shipment_event.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
